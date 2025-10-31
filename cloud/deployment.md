@@ -212,6 +212,30 @@ sudo certbot renew --dry-run
 ```
 
 ---
+## Configuring AWS CLI for DigitalOcean Spaces or Ubuntu Server
+
+### Step 1: Install the AWS CLI
+
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt install unzip
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+### Step 2: Basic Configuration
+
+```bash
+aws configure
+```
+
+When prompted, enter the following values:
+- **AWS Access Key ID**: `<your_access_key>`  
+- **AWS Secret Access Key**: `<your_secret_key>`  
+- **Default region name**: `<your_region>` (e.g., `sgp1` for Singapore)  
+- **Default output format**: `json`  
+
+---
 
 ## Continuous Deployment Workflow
 
